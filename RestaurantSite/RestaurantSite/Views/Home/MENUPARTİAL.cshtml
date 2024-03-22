@@ -1,0 +1,27 @@
+﻿<br />
+<div style="background-color:white;" id="menu">
+    <div class="header pb-lg-3 pb-3 text-center">
+        <br /><br />   <h3 class="tittle mb-lg-3 mb-3">LEZZETLİ BURGERLERİMİZ</h3><br />
+    </div>
+    <div class="middile-inner-con">
+        <div class="tab-main mx-auto text-center">
+            <table style="width: 100%;">
+                <tr>
+                    @foreach (var item in (List<RestaurantSite.Models.Entity.TBLMENU>)ViewBag.TBLMENU)
+                    {
+                        <td style="text-align: center; padding: 20px;">
+                            <div class="ab-info">
+                                <img src="~/AAAweb/images/5.jpg" alt="news image" class="img-fluid rounded-circle" style="width:150px; height: 150px; object-fit: cover; border:1px solid red">
+                                <div class="ab-info-con" style="font-size: 18px;">
+                                    <h4 style="font-size: 20px; font-weight: bold;">@item.BurgerAd</h4>
+                                    <p class="price" style="font-size: 18px; font-weight: bold;">@item.BurgerFiyat</p>
+                                </div>
+                            </div>
+                        </td>
+                    }
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<br /><br />

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HAMBURGERDBModelStoreContainer" CdmEntityContainer="HAMBURGERDBEntities4">
+    <EntitySetMapping Name="TBLABOUT">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLABOUT">
+        <MappingFragment StoreEntitySet="TBLABOUT">
+          <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+          <ScalarProperty Name="AboutBaslik" ColumnName="AboutBaslik" />
+          <ScalarProperty Name="AboutText" ColumnName="AboutText" />
+          <ScalarProperty Name="AboutImageURL" ColumnName="AboutImageURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLADMİN">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLADMİN">
+        <MappingFragment StoreEntitySet="TBLADMİN">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminUserName" ColumnName="AdminUserName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLFIRSAT">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFIRSAT">
+        <MappingFragment StoreEntitySet="TBLFIRSAT">
+          <ScalarProperty Name="FirsatID" ColumnName="FirsatID" />
+          <ScalarProperty Name="FirsatBaslik" ColumnName="FirsatBaslik" />
+          <ScalarProperty Name="FirsatFiyat" ColumnName="FirsatFiyat" />
+          <ScalarProperty Name="FirsatAciklama1" ColumnName="FirsatAciklama1" />
+          <ScalarProperty Name="FirsatAciklama2" ColumnName="FirsatAciklama2" />
+          <ScalarProperty Name="FirsatAciklama3" ColumnName="FirsatAciklama3" />
+          <ScalarProperty Name="Renk" ColumnName="Renk" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLFIRSAT2">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFIRSAT2">
+        <MappingFragment StoreEntitySet="TBLFIRSAT2">
+          <ScalarProperty Name="FirsatikiID" ColumnName="FirsatikiID" />
+          <ScalarProperty Name="FirsatikiBaslik" ColumnName="FirsatikiBaslik" />
+          <ScalarProperty Name="Firsat2Fiyat" ColumnName="Firsat2Fiyat" />
+          <ScalarProperty Name="FirsatikiAciklama1" ColumnName="FirsatikiAciklama1" />
+          <ScalarProperty Name="FirsatikiAciklama2" ColumnName="FirsatikiAciklama2" />
+          <ScalarProperty Name="FirsatikiAciklama3" ColumnName="FirsatikiAciklama3" />
+          <ScalarProperty Name="FirsatArkaPlanRenk" ColumnName="FirsatArkaPlanRenk" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLFOOTER">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFOOTER">
+        <MappingFragment StoreEntitySet="TBLFOOTER">
+          <ScalarProperty Name="FooterID" ColumnName="FooterID" />
+          <ScalarProperty Name="FooterText" ColumnName="FooterText" />
+          <ScalarProperty Name="FooterAcilisSattler" ColumnName="FooterAcilisSattler" />
+          <ScalarProperty Name="FooterMail" ColumnName="FooterMail" />
+          <ScalarProperty Name="FotterTelefon" ColumnName="FotterTelefon" />
+          <ScalarProperty Name="FooterAdres" ColumnName="FooterAdres" />
+          <ScalarProperty Name="FooterFacebook" ColumnName="FooterFacebook" />
+          <ScalarProperty Name="FooterTwitter" ColumnName="FooterTwitter" />
+          <ScalarProperty Name="Footerİnstagram" ColumnName="Footerİnstagram" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLGALERI">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLGALERI">
+        <MappingFragment StoreEntitySet="TBLGALERI">
+          <ScalarProperty Name="GaleriID" ColumnName="GaleriID" />
+          <ScalarProperty Name="GaleriImageURL" ColumnName="GaleriImageURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLGİRİS">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLGİRİS">
+        <MappingFragment StoreEntitySet="TBLGİRİS">
+          <ScalarProperty Name="GirisID" ColumnName="GirisID" />
+          <ScalarProperty Name="GirisBaslik" ColumnName="GirisBaslik" />
+          <ScalarProperty Name="GirisTelefon" ColumnName="GirisTelefon" />
+          <ScalarProperty Name="GirisImageURL" ColumnName="GirisImageURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLMENU">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLMENU">
+        <MappingFragment StoreEntitySet="TBLMENU">
+          <ScalarProperty Name="BurgerID" ColumnName="BurgerID" />
+          <ScalarProperty Name="BurgerAd" ColumnName="BurgerAd" />
+          <ScalarProperty Name="BurgerFiyat" ColumnName="BurgerFiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLYORUMLAR">
+      <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLYORUMLAR">
+        <MappingFragment StoreEntitySet="TBLYORUMLAR">
+          <ScalarProperty Name="YorumID" ColumnName="YorumID" />
+          <ScalarProperty Name="YorumAdSoyad" ColumnName="YorumAdSoyad" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="YorumText" ColumnName="YorumText" />
+          <ScalarProperty Name="YorumStatus" ColumnName="YorumStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

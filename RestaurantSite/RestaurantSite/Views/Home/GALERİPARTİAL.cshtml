@@ -1,0 +1,22 @@
+﻿
+
+<div class="header text-center">
+    <h3 class="tittle mb-lg-5 mb-3">GALERİ</h3>
+</div>
+<div style="float:left;">
+    @foreach (var item in (List<RestaurantSite.Models.Entity.TBLGALERI>)ViewBag.TBLGALERI)
+    {
+        <div class="container py-md-5">
+            <section class="gallery py-5" id="gallery" style="background-color:white;">
+
+                <div class="row news-grids text-center gallery-wrap">
+                    <div class="col-md-3 gal-img">
+                        <a href="#gal1"><img src="~/AAAweb/images/@item.GaleriImageURL" alt="news image" class="img-fluid"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    }
+</div>

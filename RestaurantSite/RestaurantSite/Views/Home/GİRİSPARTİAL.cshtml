@@ -1,0 +1,29 @@
+﻿
+@foreach (var item in (List<RestaurantSite.Models.Entity.TBLGİRİS>)ViewBag.TBLGİRİS)
+{
+    <div class="container">
+        <div class="banner-info-w3layouts text-center">
+            <h3>@item.GirisBaslik</h3>
+            <div class="read-more">
+                <a href="#about" class="read-more scroll">Devamı</a>
+            </div>
+        </div>
+        <div class="row order-info">
+            <div class="middle mt-3 col-md-6 text-left">
+                <ul class="social mb-4">
+                    <li><a href="#"><span class="fa fa-facebook icon_facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter icon_twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-google-plus icon_google-plus"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin icon_linkedin"></span></a></li>
+                    <li><a href="#"><span class="fa fa-dribbble icon_dribbble"></span></a></li>
+                </ul>
+
+            </div>
+            <div class="middle-right mt-md-3 col-md-6 text-right">
+                <h6><span class="fa fa-phone"></span> Sipariş Ver : @item.GirisTelefon</h6>
+            </div>
+        </div>
+    </div>
+
+}
+

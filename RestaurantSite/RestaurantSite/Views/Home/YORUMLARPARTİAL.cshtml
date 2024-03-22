@@ -1,0 +1,23 @@
+﻿
+<section class="testimonials" id="testimonials">
+    <div class="layer footer">
+    
+        @foreach (var item in (List<RestaurantSite.Models.Entity.TBLYORUMLAR>)ViewBag.TBLYORUMLAR)
+        {
+            if (item.YorumStatus==true)
+            {
+<div class="container py-5">
+    <div class="test-info text-center">
+        <h3 class="my-md-2 my-3">@item.YorumAdSoyad</h3><hr>
+
+        <p><span class="fa fa-quote-left"></span>~ @item.YorumText <span class="fa fa-quote-right"></span></p>
+
+    </div>
+</div>
+            }
+
+            
+
+        }
+    </div>
+</section>

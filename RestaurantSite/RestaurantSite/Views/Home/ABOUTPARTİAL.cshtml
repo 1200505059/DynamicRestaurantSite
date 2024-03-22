@@ -1,0 +1,23 @@
+﻿<br />
+<br />
+@foreach (var item in (List<RestaurantSite.Models.Entity.TBLABOUT>)ViewBag.TBLABOUT)
+{
+    <section class="banner-bottom-wthree py-5" id="about">
+        <div class="container py-md-3">
+            <div class="row banner-grids">
+                <div class="col-md-6 content-left-bottom text-left pr-lg-5">
+                    <h4>@item.AboutBaslik</h4>
+                    <p class="mt-2 text-left">Integer pulvinar leo id viverra feugiat.<strong class="text-capitalize">@item.AboutText</strong></p>
+
+                </div>
+                <div class="col-md-6 content-right-bottom text-left">
+                    <img src="~/AAAweb/images/@item.AboutImageURL" alt="news image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+<br /><br />
+
+

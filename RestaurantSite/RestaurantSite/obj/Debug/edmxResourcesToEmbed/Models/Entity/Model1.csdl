@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HAMBURGERDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLABOUT">
+    <Key>
+      <PropertyRef Name="AboutID" />
+    </Key>
+    <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AboutBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AboutText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AboutImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLADMİN">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLFIRSAT">
+    <Key>
+      <PropertyRef Name="FirsatID" />
+    </Key>
+    <Property Name="FirsatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirsatBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirsatFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirsatAciklama1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirsatAciklama2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirsatAciklama3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Durum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLFIRSAT2">
+    <Key>
+      <PropertyRef Name="FirsatikiID" />
+    </Key>
+    <Property Name="FirsatikiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirsatikiBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Firsat2Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirsatikiAciklama1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirsatikiAciklama2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirsatikiAciklama3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirsatArkaPlanRenk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Durum" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLFOOTER">
+    <Key>
+      <PropertyRef Name="FooterID" />
+    </Key>
+    <Property Name="FooterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FooterText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FooterAcilisSattler" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FooterMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FotterTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FooterAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FooterFacebook" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FooterTwitter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Footerİnstagram" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLGALERI">
+    <Key>
+      <PropertyRef Name="GaleriID" />
+    </Key>
+    <Property Name="GaleriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GaleriImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLGİRİS">
+    <Key>
+      <PropertyRef Name="GirisID" />
+    </Key>
+    <Property Name="GirisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GirisBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GirisTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GirisImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLMENU">
+    <Key>
+      <PropertyRef Name="BurgerID" />
+    </Key>
+    <Property Name="BurgerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BurgerAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BurgerFiyat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLYORUMLAR">
+    <Key>
+      <PropertyRef Name="YorumID" />
+    </Key>
+    <Property Name="YorumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YorumAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YorumText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YorumStatus" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="HAMBURGERDBEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" />
+    <EntitySet Name="TBLADMİN" EntityType="Self.TBLADMİN" />
+    <EntitySet Name="TBLFIRSAT" EntityType="Self.TBLFIRSAT" />
+    <EntitySet Name="TBLFIRSAT2" EntityType="Self.TBLFIRSAT2" />
+    <EntitySet Name="TBLFOOTER" EntityType="Self.TBLFOOTER" />
+    <EntitySet Name="TBLGALERI" EntityType="Self.TBLGALERI" />
+    <EntitySet Name="TBLGİRİS" EntityType="Self.TBLGİRİS" />
+    <EntitySet Name="TBLMENU" EntityType="Self.TBLMENU" />
+    <EntitySet Name="TBLYORUMLAR" EntityType="Self.TBLYORUMLAR" />
+  </EntityContainer>
+</Schema>

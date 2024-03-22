@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HAMBURGERDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLABOUT">
+          <Key>
+            <PropertyRef Name="AboutID" />
+          </Key>
+          <Property Name="AboutID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AboutBaslik" Type="varchar" MaxLength="50" />
+          <Property Name="AboutText" Type="varchar(max)" />
+          <Property Name="AboutImageURL" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="TBLADMİN">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminUserName" Type="varchar" MaxLength="50" />
+          <Property Name="AdminPassword" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLFIRSAT">
+          <Key>
+            <PropertyRef Name="FirsatID" />
+          </Key>
+          <Property Name="FirsatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirsatBaslik" Type="nvarchar(max)" />
+          <Property Name="FirsatFiyat" Type="varchar" MaxLength="50" />
+          <Property Name="FirsatAciklama1" Type="varchar" MaxLength="50" />
+          <Property Name="FirsatAciklama2" Type="varchar" MaxLength="50" />
+          <Property Name="FirsatAciklama3" Type="varchar" MaxLength="50" />
+          <Property Name="Renk" Type="varchar" MaxLength="50" />
+          <Property Name="Durum" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TBLFIRSAT2">
+          <Key>
+            <PropertyRef Name="FirsatikiID" />
+          </Key>
+          <Property Name="FirsatikiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirsatikiBaslik" Type="nvarchar(max)" />
+          <Property Name="Firsat2Fiyat" Type="varchar" MaxLength="50" />
+          <Property Name="FirsatikiAciklama1" Type="nvarchar(max)" />
+          <Property Name="FirsatikiAciklama2" Type="nvarchar(max)" />
+          <Property Name="FirsatikiAciklama3" Type="nvarchar(max)" />
+          <Property Name="FirsatArkaPlanRenk" Type="varchar" MaxLength="50" />
+          <Property Name="Durum" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="TBLFOOTER">
+          <Key>
+            <PropertyRef Name="FooterID" />
+          </Key>
+          <Property Name="FooterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FooterText" Type="varchar(max)" />
+          <Property Name="FooterAcilisSattler" Type="varchar" MaxLength="50" />
+          <Property Name="FooterMail" Type="varchar" MaxLength="50" />
+          <Property Name="FotterTelefon" Type="varchar" MaxLength="50" />
+          <Property Name="FooterAdres" Type="varchar" MaxLength="50" />
+          <Property Name="FooterFacebook" Type="varchar" MaxLength="50" />
+          <Property Name="FooterTwitter" Type="varchar" MaxLength="50" />
+          <Property Name="Footerİnstagram" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLGALERI">
+          <Key>
+            <PropertyRef Name="GaleriID" />
+          </Key>
+          <Property Name="GaleriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GaleriImageURL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLGİRİS">
+          <Key>
+            <PropertyRef Name="GirisID" />
+          </Key>
+          <Property Name="GirisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GirisBaslik" Type="varchar" MaxLength="50" />
+          <Property Name="GirisTelefon" Type="varchar" MaxLength="50" />
+          <Property Name="GirisImageURL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLMENU">
+          <Key>
+            <PropertyRef Name="BurgerID" />
+          </Key>
+          <Property Name="BurgerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BurgerAd" Type="varchar" MaxLength="50" />
+          <Property Name="BurgerFiyat" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TBLYORUMLAR">
+          <Key>
+            <PropertyRef Name="YorumID" />
+          </Key>
+          <Property Name="YorumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YorumAdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="YorumText" Type="nvarchar(max)" />
+          <Property Name="YorumStatus" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="HAMBURGERDBModelStoreContainer">
+          <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLADMİN" EntityType="Self.TBLADMİN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFIRSAT" EntityType="Self.TBLFIRSAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFIRSAT2" EntityType="Self.TBLFIRSAT2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLFOOTER" EntityType="Self.TBLFOOTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLGALERI" EntityType="Self.TBLGALERI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLGİRİS" EntityType="Self.TBLGİRİS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMENU" EntityType="Self.TBLMENU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLYORUMLAR" EntityType="Self.TBLYORUMLAR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HAMBURGERDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBLABOUT">
+          <Key>
+            <PropertyRef Name="AboutID" />
+          </Key>
+          <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AboutText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AboutImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLADMİN">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLFIRSAT">
+          <Key>
+            <PropertyRef Name="FirsatID" />
+          </Key>
+          <Property Name="FirsatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirsatBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirsatFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirsatAciklama1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirsatAciklama2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirsatAciklama3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLFIRSAT2">
+          <Key>
+            <PropertyRef Name="FirsatikiID" />
+          </Key>
+          <Property Name="FirsatikiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirsatikiBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Firsat2Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirsatikiAciklama1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirsatikiAciklama2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirsatikiAciklama3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirsatArkaPlanRenk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLFOOTER">
+          <Key>
+            <PropertyRef Name="FooterID" />
+          </Key>
+          <Property Name="FooterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FooterText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FooterAcilisSattler" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FooterMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FotterTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FooterAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FooterFacebook" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FooterTwitter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Footerİnstagram" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLGALERI">
+          <Key>
+            <PropertyRef Name="GaleriID" />
+          </Key>
+          <Property Name="GaleriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GaleriImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLGİRİS">
+          <Key>
+            <PropertyRef Name="GirisID" />
+          </Key>
+          <Property Name="GirisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GirisBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GirisTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GirisImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLMENU">
+          <Key>
+            <PropertyRef Name="BurgerID" />
+          </Key>
+          <Property Name="BurgerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BurgerAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BurgerFiyat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLYORUMLAR">
+          <Key>
+            <PropertyRef Name="YorumID" />
+          </Key>
+          <Property Name="YorumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YorumAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YorumText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YorumStatus" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="HAMBURGERDBEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLABOUT" EntityType="Self.TBLABOUT" />
+          <EntitySet Name="TBLADMİN" EntityType="Self.TBLADMİN" />
+          <EntitySet Name="TBLFIRSAT" EntityType="Self.TBLFIRSAT" />
+          <EntitySet Name="TBLFIRSAT2" EntityType="Self.TBLFIRSAT2" />
+          <EntitySet Name="TBLFOOTER" EntityType="Self.TBLFOOTER" />
+          <EntitySet Name="TBLGALERI" EntityType="Self.TBLGALERI" />
+          <EntitySet Name="TBLGİRİS" EntityType="Self.TBLGİRİS" />
+          <EntitySet Name="TBLMENU" EntityType="Self.TBLMENU" />
+          <EntitySet Name="TBLYORUMLAR" EntityType="Self.TBLYORUMLAR" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HAMBURGERDBModelStoreContainer" CdmEntityContainer="HAMBURGERDBEntities4">
+          <EntitySetMapping Name="TBLABOUT">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLABOUT">
+              <MappingFragment StoreEntitySet="TBLABOUT">
+                <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+                <ScalarProperty Name="AboutBaslik" ColumnName="AboutBaslik" />
+                <ScalarProperty Name="AboutText" ColumnName="AboutText" />
+                <ScalarProperty Name="AboutImageURL" ColumnName="AboutImageURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLADMİN">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLADMİN">
+              <MappingFragment StoreEntitySet="TBLADMİN">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="AdminUserName" ColumnName="AdminUserName" />
+                <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFIRSAT">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFIRSAT">
+              <MappingFragment StoreEntitySet="TBLFIRSAT">
+                <ScalarProperty Name="FirsatID" ColumnName="FirsatID" />
+                <ScalarProperty Name="FirsatBaslik" ColumnName="FirsatBaslik" />
+                <ScalarProperty Name="FirsatFiyat" ColumnName="FirsatFiyat" />
+                <ScalarProperty Name="FirsatAciklama1" ColumnName="FirsatAciklama1" />
+                <ScalarProperty Name="FirsatAciklama2" ColumnName="FirsatAciklama2" />
+                <ScalarProperty Name="FirsatAciklama3" ColumnName="FirsatAciklama3" />
+                <ScalarProperty Name="Renk" ColumnName="Renk" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFIRSAT2">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFIRSAT2">
+              <MappingFragment StoreEntitySet="TBLFIRSAT2">
+                <ScalarProperty Name="FirsatikiID" ColumnName="FirsatikiID" />
+                <ScalarProperty Name="FirsatikiBaslik" ColumnName="FirsatikiBaslik" />
+                <ScalarProperty Name="Firsat2Fiyat" ColumnName="Firsat2Fiyat" />
+                <ScalarProperty Name="FirsatikiAciklama1" ColumnName="FirsatikiAciklama1" />
+                <ScalarProperty Name="FirsatikiAciklama2" ColumnName="FirsatikiAciklama2" />
+                <ScalarProperty Name="FirsatikiAciklama3" ColumnName="FirsatikiAciklama3" />
+                <ScalarProperty Name="FirsatArkaPlanRenk" ColumnName="FirsatArkaPlanRenk" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLFOOTER">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLFOOTER">
+              <MappingFragment StoreEntitySet="TBLFOOTER">
+                <ScalarProperty Name="FooterID" ColumnName="FooterID" />
+                <ScalarProperty Name="FooterText" ColumnName="FooterText" />
+                <ScalarProperty Name="FooterAcilisSattler" ColumnName="FooterAcilisSattler" />
+                <ScalarProperty Name="FooterMail" ColumnName="FooterMail" />
+                <ScalarProperty Name="FotterTelefon" ColumnName="FotterTelefon" />
+                <ScalarProperty Name="FooterAdres" ColumnName="FooterAdres" />
+                <ScalarProperty Name="FooterFacebook" ColumnName="FooterFacebook" />
+                <ScalarProperty Name="FooterTwitter" ColumnName="FooterTwitter" />
+                <ScalarProperty Name="Footerİnstagram" ColumnName="Footerİnstagram" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLGALERI">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLGALERI">
+              <MappingFragment StoreEntitySet="TBLGALERI">
+                <ScalarProperty Name="GaleriID" ColumnName="GaleriID" />
+                <ScalarProperty Name="GaleriImageURL" ColumnName="GaleriImageURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLGİRİS">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLGİRİS">
+              <MappingFragment StoreEntitySet="TBLGİRİS">
+                <ScalarProperty Name="GirisID" ColumnName="GirisID" />
+                <ScalarProperty Name="GirisBaslik" ColumnName="GirisBaslik" />
+                <ScalarProperty Name="GirisTelefon" ColumnName="GirisTelefon" />
+                <ScalarProperty Name="GirisImageURL" ColumnName="GirisImageURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMENU">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLMENU">
+              <MappingFragment StoreEntitySet="TBLMENU">
+                <ScalarProperty Name="BurgerID" ColumnName="BurgerID" />
+                <ScalarProperty Name="BurgerAd" ColumnName="BurgerAd" />
+                <ScalarProperty Name="BurgerFiyat" ColumnName="BurgerFiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLYORUMLAR">
+            <EntityTypeMapping TypeName="HAMBURGERDBModel.TBLYORUMLAR">
+              <MappingFragment StoreEntitySet="TBLYORUMLAR">
+                <ScalarProperty Name="YorumID" ColumnName="YorumID" />
+                <ScalarProperty Name="YorumAdSoyad" ColumnName="YorumAdSoyad" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="YorumText" ColumnName="YorumText" />
+                <ScalarProperty Name="YorumStatus" ColumnName="YorumStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

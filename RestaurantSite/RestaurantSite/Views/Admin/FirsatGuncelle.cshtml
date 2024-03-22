@@ -1,0 +1,41 @@
+﻿@model RestaurantSite.Models.Entity.TBLFIRSAT
+@{
+    ViewBag.Title = "FirsatGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="card-form" method="post" style="max-width: 1200px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">ID</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatID" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatID">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">BAŞLIK</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatBaslik" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatBaslik">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">AÇIKLAMA1</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatAciklama1" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatAciklama1">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">AÇIKLAMA2</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatAciklama2" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatAciklama2">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">AÇIKLAMA3</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatAciklama3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatAciklama3">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">FİYAT</label>
+        <input type="text" class="form-control" id="CardID" name="FirsatFiyat" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.FirsatFiyat">
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label for="CardID" style="font-weight: bold;">RENK</label>
+        <input type="color" class="form-control" id="CardID" name="Renk" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" value="@Model.Renk">
+    </div>
+    <div class="form-group" style="margin-top: 15px;">
+        <button type="submit" class="btn btn-warning" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #ffc107; color: #fff; cursor: pointer;">GÜNCELLE</button>
+    </div>
+
+</form>
+

@@ -1,0 +1,44 @@
+﻿
+ 
+@foreach (var item in (List<RestaurantSite.Models.Entity.TBLFIRSAT2>)ViewBag.TBLFIRSAT2)
+{
+    <section class="order-sec pb-5 pt-md-0 pt-5" id="order" style="background-color:@item.FirsatArkaPlanRenk; visibility:@item.Durum">
+        <div class="container py-lg-3">
+            <div class="test-info text-center">
+                <h3 class="tittle order">
+                    @item.FirsatikiBaslik
+                </h3>
+
+                <div class="row mt-lg-4 mt-3">
+                    <div class="col-md-6 order-left-content text-right">
+                        <h4>@item.Firsat2Fiyat</h4>
+                    </div>
+                    <div class="col-md-6 order-right-content text-left">
+                        <ul class="tic-info list-unstyled">
+                            <li>
+
+                                <span class="fa fa-long-arrow-right mr-2"></span> @item.FirsatikiAciklama1
+
+                            </li>
+                            <li>
+
+                                <span class="fa fa-long-arrow-right mr-2"></span>@item.FirsatikiAciklama2
+
+                            </li>
+                            <li>
+
+                                <span class="fa fa-long-arrow-right mr-2"></span> @item.FirsatikiAciklama3
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="read-more mx-auto text-center">
+                        <a href="#contact" class="read-more scroll">Read More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
